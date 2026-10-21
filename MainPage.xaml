@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://microsoft.com"
+             xmlns:x="http://microsoft.com"
+             x:Class="SupabaseMauiApp.MainPage">
+
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center" Spacing="20">
+
+        <Label Text="Supabase Cloud Test" 
+               FontSize="32" 
+               HorizontalOptions="Center" />
+
+        <Button x:Name="SubmitBtn" 
+                Text="Send Data to Supabase" 
+                Clicked="OnCounterClicked" 
+                HeightRequest="50" 
+                WidthRequest="250" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
+
