@@ -18,7 +18,7 @@ public static class MauiProgram
 
         // 1. Add your Supabase Cloud Database Credentials
         var supabaseUrl = "https://cnohhqluwninqkubgxug.supabase.co";
-        var supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNub2hocWx1d25pbnFrdWJneHVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1OTM5MTYsImV4cCI6MjEwODE2OTkxNn0.MHSUpRwoTo5rj6D9hKokMommSjOepDqObTH_7hKo5Nw\r\n";
+        var supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImNub2hocWx1d25pbnFrdWJneHVnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTI1OTM5MTYsImV4cCI6MjEwODE2OTkxNn0.MHSUpRwoTo5rj6D9hKokMommSjOepDqObTH_7hKo5Nw";
 
         // 2. Register the Supabase Client as a Singleton
         builder.Services.AddSingleton(provider =>

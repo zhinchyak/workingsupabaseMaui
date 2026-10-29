@@ -1,26 +1,26 @@
-﻿using Newtonsoft.Json;
-using Supabase.Postgrest.Attributes;
+﻿using Supabase.Postgrest.Attributes;
 using Supabase.Postgrest.Models;
+using System;
 
 namespace SupabaseMauiApp;
 
 [Table("todo_items")]
 public class TaskModel : BaseModel
 {
-    public TaskModel() { }
-
     [PrimaryKey("id", false)]
-    [JsonProperty("id")]
     public long Id { get; set; }
 
-    // This forces the C# compiler to serialize your text as "task_name"
     [Column("task_name")]
-    [JsonProperty("task_name")]
-    public string TaskName { get; set; } = string.Empty;
+    public string task_name { get; set; } = null!;
 
-    // This forces the C# compiler to serialize your text as "category"
     [Column("category")]
-    [JsonProperty("category")]
-    public string Category { get; set; } = string.Empty;
-}
+    public string category { get; set; } = null!;
 
+    // FIX: Change 'CreatedAt' to lowercase 'created_at' 
+    // This forces the JSON deserializer to catch the server's timestamp value!
+    [Column("created_at")]
+    public DateTimeOffset created_at { get; set; }
+
+    [Column("is_completed")]
+    public bool is_completed { get; set; }
+}
