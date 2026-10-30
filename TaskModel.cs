@@ -23,4 +23,8 @@ public class TaskModel : BaseModel
 
     [Column("is_completed")]
     public bool is_completed { get; set; }
+
+    [Column("user_id")]
+    public Guid? UserId { get; set; }
+
 }
